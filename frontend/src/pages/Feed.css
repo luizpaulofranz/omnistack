@@ -20,16 +20,16 @@ section#post-list article header {
     justify-content: space-between;
 }
 
-section#post-list article header .use-info {
+section#post-list article header .user-info {
     display: flex;
     flex-direction: column;
 }
 
-section#post-list article header .use-info span {
+section#post-list article header .user-info span {
     font-size: 13px;
 }
 
-section#post-list article header .use-info span.place {
+section#post-list article header .user-info span.place {
     font-size: 11px;
     color: #666;
     margin-top: 3px;
