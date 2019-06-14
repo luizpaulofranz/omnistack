@@ -4,6 +4,8 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express();
+// cors handling, all access *
+app.use(cors());
 // to handle socket.io communication
 const server = require('http').Server(app); // to handle HTTP
 const io = require('socket.io')(server); // to handle web sockets
@@ -19,9 +21,6 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads', 'resiz
 
 // routing
 app.use(require('./routes'));
-
-// cors handling, all access *
-app.use(cors());
 
 // db connection
 mongoose.connect('mongodb+srv://user:senha@cluster0-iekvu.mongodb.net/test?retryWrites=true&w=majority', {
