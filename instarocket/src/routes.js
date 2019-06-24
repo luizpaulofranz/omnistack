@@ -15,6 +15,8 @@ export default createAppContainer(
         Feed,
         New
     }, {
+        // sets default route
+        initialRouteName: 'New',
         defaultNavigationOptions: {
             headerTitle: <Image style={{marginHorizontal: 20}} source={logo} />,
             headerBackTitle: null,
