@@ -8,8 +8,10 @@ import logo from '../assets/logo.svg';
 import './Login.css';
 
 export default function Login({ history }) {
+    // useState is a react hook wich brings us the state capabilities, including re-rendering when state changes
     // useState funtion receives the initial value as parameter
     // and returns an array with two positions, first is the value itself, second is a function which change this state variable
+    // WE MUST SET username using setUsername, to correct handle the life-cycle events
     const [ username, setUsername ] = useState('');
 
     async function handleSubmit(e) {
