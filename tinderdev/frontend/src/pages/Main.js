@@ -13,10 +13,11 @@ export default function Main({ match }) {
 
   const [ users, setUsers ] = useState([]);
 
-  // another react hook to use life-cycle methods
+  // another react hook to use life-cycle methods, it works like componentDidmount|DidUpdate|WillUnmount all together
+  // by DEFAULT, useEffect will execute AFTER ALL RENDER call, to change this default behaviour, we need a second param!
   // first param is the function that we want to execute
   // second is WHEN to execute the first param, is an array, and always that variables in array are changed, the first method is executed again
-  // if second param is an empty array, it will be executed only once, like componentDidMount =D
+  // beyound that, the componentWillUnmount can be reached by returning a function in the first param, that func will be called when the component will be destroyed
   useEffect(() => {
     // this is the recomended way to handle async funcs
     async function loadUsers() {
